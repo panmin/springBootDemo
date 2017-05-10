@@ -1,10 +1,7 @@
 package com.example;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.transaction.Transactional;
 import java.util.List;
@@ -12,7 +9,7 @@ import java.util.List;
 /**
  * Created by PanMin on 2017/5/10.
  */
-@RestController
+@RestController//等同于@Controller和@ResponseBody
 public class UserController {
     @Autowired
     private UserDB mUserDB;
