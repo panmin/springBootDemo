@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.transaction.Transactional;
+import javax.validation.Valid;
 import java.util.List;
 
 /**
@@ -20,7 +21,7 @@ public class UserController {
     }
 
     @PostMapping("/addUser")
-    public void addUser(User user){
+    public void addUser(@Valid User user){
         mUserDB.save(user);
     }
 
